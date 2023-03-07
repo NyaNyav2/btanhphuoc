@@ -1,7 +1,7 @@
 var numberGeting =document.getElementById('input1').value;
 var btn1 =document.getElementById('btn1');
 var btn2 =document.getElementById('btn2');
-const items= ["a","b","c","d","e"]; 
+const items= []; 
 
 
 function getRandomElements(list){
@@ -10,17 +10,15 @@ function getRandomElements(list){
 }
 function getNum() {
     document.getElementById('out1').innerHTML=getRandomElements(items);
-   
+    items.length=0;
+    console.log(items);
 }
 
 
 function update(){
     var inputGeting =document.getElementById('input2').value.split(/\s*,+\s*/);
     items.push(...inputGeting);
-    var index='';
-    for(i=0;i<items.length;i++){
-        index=index +items[i]
-    }
+    
     console.log(items);
 }
 
